@@ -5,17 +5,8 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-#import "RNCMaskedViewManager.h"
+#import <React/RCTView.h>
 
-#import "RNCMaskedView.h"
-
-@implementation RNCMaskedViewManager
-
-RCT_EXPORT_MODULE()
-
-- (UIView *)view
-{
-  return [RNCMaskedView new];
-}
+@interface RNCMaskedView : RCTView
 
 @end

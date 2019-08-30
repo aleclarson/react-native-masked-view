@@ -7,26 +7,27 @@
 
 #import "RNCMaskedView.h"
 
-#import <React/UIView+React.h>
+#import <React/NSView+React.h>
 
 @implementation RNCMaskedView
 
 - (void)didUpdateReactSubviews
 {
   // RNCMaskedView expects that the first subview rendered is the mask.
-  UIView *maskView = [self.reactSubviews firstObject];
-  self.maskView = maskView;
+  NSView *maskView = [self.reactSubviews firstObject];
+  self.layer.mask = maskView.layer.mask;
+  // self.maskView = maskView;
 
   // Add the other subviews to the view hierarchy
   for (NSUInteger i = 1; i < self.reactSubviews.count; i++) {
-    UIView *subview = [self.reactSubviews objectAtIndex:i];
+    NSView *subview = [self.reactSubviews objectAtIndex:i];
     [self addSubview:subview];
   }
 }
 
 - (void)displayLayer:(CALayer *)layer
 {
-  // RCTView uses displayLayer to do border rendering.
+  // RNCView uses displayLayer to do border rendering.
   // We don't need to do that in RNCMaskedView, so we
   // stub this method and override the default implementation.
 }

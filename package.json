@@ -14,6 +14,7 @@
     "masked view"
   ],
   "scripts": {
+    "preinstall": "sh scripts/preinstall.sh",
     "test:flow": "flow check",
     "test:js": "echo 0",
     "test:lint": "eslint ./",
@@ -35,7 +36,7 @@
     "eslint-plugin-react-native": "^3.7.0",
     "flow-bin": "^0.86.0",
     "prettier": "^1.18.2",
-    "react-native": ">=0.57"
+    "react-native-macos": "github:aleclarson/react-native-macos"
   },
   "repository": {
     "type": "git",

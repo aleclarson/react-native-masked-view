@@ -10,10 +10,10 @@ Pod::Spec.new do |s|
 
   s.authors      = package['author']
   s.homepage     = package['homepage']
-  s.platform     = :ios, "9.0"
+  s.platform     = :macos, "10.5"
 
   s.source       = { :git => "https://github.com/react-native-community/react-native-masked-view.git", :tag => "v#{s.version}" }
-  s.source_files  = "ios/**/*.{h,m}"
+  s.source_files  = "macos/**/*.{h,m}"
 
   s.dependency 'React'
 end
