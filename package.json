@@ -14,7 +14,6 @@
     "masked view"
   ],
   "scripts": {
-    "preinstall": "sh scripts/preinstall.sh",
     "test:flow": "flow check",
     "test:js": "echo 0",
     "test:lint": "eslint ./",
