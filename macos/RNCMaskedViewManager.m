@@ -15,7 +15,7 @@ RCT_EXPORT_MODULE()
 
 - (NSView *)view
 {
-  return [RNCMaskedView new];
+  return [[RNCMaskedView alloc] initWithFrame:NSZeroRect];
 }
 
 @end
