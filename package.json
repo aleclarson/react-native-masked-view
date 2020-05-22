@@ -10,6 +10,8 @@
   "keywords": [
     "react-native",
     "react native",
+    "react-native-macos",
+    "macos",
     "masked-view",
     "masked view"
   ],
@@ -20,6 +22,7 @@
     "test:prettier": "prettier --check './**/*.js'"
   },
   "peerDependencies": {
+    "@alloc/react-native-macos": "^0.21",
     "react": "^16.0"
   },
   "devDependencies": {
@@ -33,6 +36,6 @@
     "eslint-plugin-react-native": "^3.7.0",
     "flow-bin": "^0.86.0",
     "prettier": "^1.18.2",
-    "react-native": "npm:@alloc/react-native-macos@^0.20.0"
+    "react-native": "npm:@alloc/react-native-macos"
   }
 }
