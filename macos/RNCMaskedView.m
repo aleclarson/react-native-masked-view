@@ -27,13 +27,6 @@
   return self;
 }
 
-- (BOOL)isFlipped
-{
-  // HACK: Not sure why this is necessary when YES usually puts us in the top-left AFAIK.
-  // NOTE: This may have other side effects?
-  return NO;
-}
-
 - (void)didUpdateReactSubviews
 {
   // The first subview is always the mask.
@@ -52,6 +45,7 @@
   
   // Ensure the maskView fits to our layer.
   _maskView.frame = bounds;
+  _maskView.layer.geometryFlipped = NO;
   
   // The maskView is never drawn unless we do this.
   NSBitmapImageRep *bitmap = [_maskView bitmapImageRepForCachingDisplayInRect:bounds];
