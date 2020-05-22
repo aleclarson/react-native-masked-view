@@ -21,6 +21,15 @@
     "test:lint": "eslint ./",
     "test:prettier": "prettier --check './**/*.js'"
   },
+  "files": [
+    "index.js",
+    "js",
+    "types",
+    "*.podspec",
+    "macos/*.m",
+    "macos/*.h",
+    "macos/RNCMaskedView.xcodeproj/project.xcworkspace/contents.xcworkspacedata"
+  ],
   "peerDependencies": {
     "@alloc/react-native-macos": "^0.21",
     "react": "^16.0"
